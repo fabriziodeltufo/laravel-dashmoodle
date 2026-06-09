@@ -1,0 +1,172 @@
+/* CUSTOM STYLE FOR MY DASHBOARD MOODLE */
+
+/* ! RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ! DEFAULT */
+body,
+html {
+    font-size: 16px;
+    font-weight: 300;
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* ! HELPERS */
+.br {
+    border: 1px solid red;
+}
+
+.border-radius {
+    border-radius: 15px;
+}
+
+/* ! HEADER */
+.header {
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    margin: 0 auto !important;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 10px 20px;
+}
+
+.header a {
+    display: block;
+    color: black;
+    font-weight: bold;
+    padding: 15px 20px;
+}
+
+/* ! HEADER LOGO */
+.header__logo img {
+    width: 30%;
+    height: auto;
+}
+
+/* ! HEADER MENU */
+.header__menu {
+    margin-bottom: 0;
+}
+
+.header__menu li {
+    display: inline-block;
+}
+
+/* ! MAIN */
+.main {
+    margin-top: 50px;
+}
+
+.lista-corsi {
+    padding: 20px;
+}
+
+.card-corso {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px;
+    /* background-color: #eee; */
+}
+
+/* ! CORSI */
+.heading-corsi {
+    background-color: lightsalmon;
+    font-weight: 700;
+}
+
+.records-corsi {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.records-corsi:nth-of-type(even) .row {
+    background-color: #ffffff;
+}
+
+.records-corsi:nth-of-type(odd) .row {
+    background-color: #f2f2f2;
+}
+
+/* ! UTENTI */
+.heading-utenti {
+    background-color: lightskyblue;
+    font-weight: 300;
+    /* font-style: italic; */
+}
+
+.records-utenti {
+    font-size: 14px;
+    /* font-style: italic; */
+}
+
+.records-utenti:nth-of-type(odd) .row {
+    background-color: #f2f2f2;
+}
+
+.records-utenti:nth-of-type(even) .row {
+    background-color: #ffffff;
+}
+
+/* ! METODI */
+.heading-metodi {
+    background-color: lightskyblue;
+    font-weight: 300;
+    /* font-style: italic; */
+}
+
+.records-metodi {
+    font-size: 14px;
+    /* font-style: italic; */
+    font-weight: 600;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.col {
+    flex: 1;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.totale {
+    background-color: lightsalmon;
+    padding: 10px;
+}
+
+/* ! FOOTER */
+
+.footer p {
+    padding: 20px;
+}
