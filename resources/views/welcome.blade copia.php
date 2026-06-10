@@ -69,26 +69,22 @@
         border-color: rgba(255, 255, 255, 0.6);
     }
 
-    /* ✏️ MODIFICATO: gap ridotto, padding asimmetrico */
     .main-content {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        width: 100%;
         display: flex;
-        justify-content: center;
         align-items: center;
-        min-height: calc(100vh - 120px);
-        padding: 2rem 0 2rem 3rem;
-        gap: 1rem;
-        margin-top: -50px;
+        gap: 20px;
     }
 
-    /* ✏️ MODIFICATO: larghezza fissa e z-index per stare sopra l'immagine */
     .text-content {
-        flex: 0 0 42%;
-        max-width: 500px;
+        flex: 0 0 40%;
         color: white;
         z-index: 2;
         position: relative;
-        padding-left: 2rem;
-
     }
 
     .text-content h1 {
@@ -144,28 +140,18 @@
         font-weight: 600;
     }
 
-
     .image-container {
+        flex: 0 0 60%;
         position: relative;
-        flex: 0 0 68%;
-        max-width: none;
-        margin-left: auto;
-        margin-right: 0;
-        z-index: 1;
         overflow: hidden;
+        z-index: 1;
     }
 
     .center-image {
         width: 100%;
-        /* dimensione originale, niente zoom */
         height: auto;
-        position: relative;
-        z-index: 1;
-        left: 20%;
-        /* sposta a destra del 20% */
+        display: block;
     }
-
-
 
     .spotlight {
         position: absolute;
@@ -183,13 +169,14 @@
         filter: blur(40px);
     }
 
-
-
     .footer {
         background: #0f172a;
         color: white;
         padding: 1.5rem 3rem;
-        margin-top: auto;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 10;
     }
 
     .footer-content {
@@ -219,7 +206,13 @@
 
     @media (max-width: 1024px) {
         .main-content {
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: none;
+            width: 100%;
             flex-direction: column;
+            padding: 2rem 2rem 2rem 2rem;
             gap: 3rem;
         }
 
@@ -233,6 +226,16 @@
     }
 
     @media (max-width: 768px) {
+        .footer {
+            position: relative;
+            /* torna nel flusso, non fixed */
+            bottom: auto;
+        }
+
+        .spotlight {
+            display: none;
+        }
+
         .footer-content {
             flex-direction: column;
             gap: 0.5rem;
@@ -289,13 +292,10 @@
 
         <!-- Colonna destra - Immagine -->
         <div class="image-container">
-
             <!-- Spotlight effect -->
             <div class="spotlight"></div>
-
             <!-- Immagine -->
             <img src="{{ asset('images/cover-dash-moodle-trasp.png') }}" alt="Dashboard Moodle" class="center-image">
-
         </div>
     </div>
 
@@ -308,9 +308,7 @@
             </div>
             <div class="footer-right">
                 <p>Visit LMS Moodle Platform : <a href="https://vivaitalia.online" target="_blank"
-                        class="footer-link">Viva
-                        Italia
-                        Online</a>
+                        class="footer-link">Viva Italia Online</a>
                 </p>
             </div>
         </div>
